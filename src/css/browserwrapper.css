@@ -150,6 +150,9 @@
 }
 
 .browser-gui-controls .address-bar {
+	position: absolute;
+	left: 120px;
+	right: 20px;
 	float: left;
 	margin: 4px 10px 0 0;
 	height: 25px !important;
