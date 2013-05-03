@@ -5,9 +5,15 @@
 	<title>browserWrapper</title>
 	<link rel="stylesheet" href="src/css/browserwrapper.css" />
 	<style>
+		#browser{
+			width: 75%;
+		}
 		#browser .browser-content{
-			width: 900px;
-			height: 500px;
+			width: 100%;
+			/*Setting height to 0 and using padding-bottom, defines the ratio.
+			Here: width:height = 2:1*/
+			height: 0;
+			padding-bottom: 50%;
 			position: relative;
 		}
 		#browser object{
@@ -28,12 +34,11 @@
 	  </div>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="src/js/jquery.browserwrapper.js"></script>
+	<script type="text/javascript" src="src/js/jquery.browserwrapper.min.js"></script>
 	<script>
 		jQuery(document).ready(function ($) {
 		  var instanceWrap = $('#browser').browserWrapper({
-		  	filePath: 		'src/',
-		  	responsive: 	'y'
+		  	filePath: 		'src/'
 		  });
 		});
 	</script>

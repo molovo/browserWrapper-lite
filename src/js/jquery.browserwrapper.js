@@ -23,8 +23,7 @@
             browserURL:     'http://your.awesome.url.com',  //URL to appear in address bar
             favicon:        'http://browserwrapper.molovo.co.uk/img/favicon.ico',       //URL for favicon to appear on tab
             filePath:       'browserWrapper-lite/src/',                          //path to browserWrapper
-            shadow:         '0px 5px 15px rgba(0,0,0,0.3)',             //adds a box-shadow to the browser, follows CSS syntax, use '0' to remove
-            responsive:     'n'                                         // if 'y', reloads page on window.resize to redraw browser window at a different size
+            shadow:         '0px 5px 15px rgba(0,0,0,0.3)'            //adds a box-shadow to the browser, follows CSS syntax, use '0' to remove
         };
         //overwrite the defaults
         var options         = $.extend(defaults, options);
@@ -36,7 +35,7 @@
         var addressBar      = $('.browser-gui .address-bar');
         var height          = act.height();
         var width           = act.width();
-        var ratioW          = width / $(window).width() * 100;
+        var ratioW          = width / $(document).width() * 100;
         var ratioH          = height / width * 100;
         var guiHeight       = height + 35;
         var windowHeight    = height + 69;
@@ -50,16 +49,5 @@
 
         //expand div and repopulate with content and browser styling
         act.html('<div class="browser-window-border" style="box-shadow: ' + defaults.shadow  + ';">' + windowControls + '<div class="browser-gui">' + browserControls + currentContent + '</div></div>').trigger('refresh');
-
-
-        if ( defaults.responsive == 'y' ) {
-            //refresh page to force browser redraw on resize
-            $(window).resize(function(){
-                act.width( ratioW + '%');
-                act.height(0).css('padding-bottom', ratioH + '%');
-                $('.browser-content').width('100%');
-            });
-        }
-
     }
 })(jQuery);
