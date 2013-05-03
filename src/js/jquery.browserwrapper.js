@@ -35,10 +35,6 @@
         var addressBar      = $('.browser-gui .address-bar');
         var height          = act.height();
         var width           = act.width();
-        var ratioW          = width / $(document).width() * 100;
-        var ratioH          = height / width * 100;
-        var guiHeight       = height + 35;
-        var windowHeight    = height + 69;
 
         //grab current content of div so that it can be replaced
         var currentContent  = act.html();
@@ -48,6 +44,6 @@
         var windowControls  = '<div class="browser-window-controls"><img class="window-button red" src="' + defaults.filePath + 'img/red-button.png" /><img class="window-button yellow" src="' + defaults.filePath + 'img/yellow-button.png" /><img class="window-button green" src="' + defaults.filePath + 'img/green-button.png" /><span class="tab"><span class="tab-wrapper"><img class="favicon" src="' + defaults.favicon + '" /><span class="tabtext">' + defaults.browserTitle + '</span></span></span></div>';
 
         //expand div and repopulate with content and browser styling
-        act.html('<div class="browser-window-border" style="box-shadow: ' + defaults.shadow  + ';">' + windowControls + '<div class="browser-gui">' + browserControls + currentContent + '</div></div>').trigger('refresh');
+        act.html('<div class="browser-window-border" style="box-shadow: ' + defaults.shadow  + ';">' + windowControls + '<div class="browser-gui">' + browserControls + currentContent + '</div></div>');
     }
 })(jQuery);
