@@ -35,6 +35,8 @@
         var addressBar      = $('.browser-gui .address-bar');
         var height          = act.height();
         var width           = act.width();
+        var guiHeight       = height + 35;
+        var windowHeight    = height + 69;
 
         //grab current content of div so that it can be replaced
         var currentContent  = act.html();
