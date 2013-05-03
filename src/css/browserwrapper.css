@@ -15,8 +15,8 @@
 	border: 1px solid rgba(0,0,0,0.3);
 	border-radius: 5px 5px 0 0;
 	margin-left: -2px;
-	min-width: 300px !important;
-	min-height: 69px !important;
+	min-height: 69px;
+	min-width: 300px;
 }
 
 .browser-window-controls {
@@ -62,13 +62,15 @@
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	width:  231px;
-	height: 26px !important;
+	max-width:  231px;
+	height: 26px;
 	padding: 0 37px 0 16px;
 	top: 3px;
 	float: left;
 	overflow: hidden;
 	z-index: 5;
+	white-space: nowrap;
+	overflow-x: hidden;
 }
 
 .browser-window-controls .tab-wrapper {
@@ -76,16 +78,18 @@
 	display: inline-block;
 	background: rgb(240,240,240); /* Old browsers */
 	background: -webkit-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(223,223,223,1) 100%);
-	width: 178px;
+	max-width: 178px;
 	background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(223,223,223,1) 100%);
 	background: -o-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(223,223,223,1) 100%);
 	background: -ms-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(223,223,223,1) 100%);
 	background: linear-gradient(top, rgba(240,240,240,1) 0%, rgba(223,223,223,1) 100%); /* W3C */
 	-image  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
-	height: 26px !important;
+	height: 26px;
 
 	-ms-overflow-y: hidden;
 	overflow-y: hidden;
+	white-space: nowrap;
+	overflow-x: hidden;
 }
 
 .browser-window-controls .tabtext,
@@ -107,8 +111,10 @@
 	padding-top: 2px;
 	line-height: 13px;
 	width: 150px;
+	white-space: nowrap;
 	overflow-x: hidden;
 	text-align: left;
+	overflow-y: none;
 }
 
 .browser-gui {
@@ -155,7 +161,7 @@
 	right: 20px;
 	float: left;
 	margin: 4px 10px 0 0;
-	height: 25px !important;
+	height: 25px;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -183,7 +189,10 @@
 	overflow-x: hidden;
 	line-height: 13px;
 	text-align: left;
-	height: 13px !important;
+	height: 13px;
+	position: absolute;
+	left: 25px;
+	right: 25px;
 }
 
 .browser-gui-controls .address-bar-icon {

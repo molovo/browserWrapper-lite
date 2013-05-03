@@ -21,7 +21,7 @@
         var defaults = {
             browserTitle:   'Your Awesome Title',                 //title to appear on tab
             browserURL:     'http://your.awesome.url.com',  //URL to appear in address bar
-            favicon:        'http://browserwrapper.molovo.co.uk/img/favicon.ico',       //URL for favicon to appear on tab
+            favicon:        'http://browserwrapper.molovo.co.uk/img/favicon.png',       //URL for favicon to appear on tab
             filePath:       'browserWrapper-lite/src/',                          //path to browserWrapper
             shadow:         '0px 5px 15px rgba(0,0,0,0.3)'            //adds a box-shadow to the browser, follows CSS syntax, use '0' to remove
         };
