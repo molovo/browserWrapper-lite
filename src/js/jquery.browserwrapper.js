@@ -35,8 +35,6 @@
         var addressBar      = $('.browser-gui .address-bar');
         var height          = act.height();
         var width           = act.width();
-        var ratioW          = width / $(document).width() * 100;
-        var ratioH          = height / width * 100;
         var guiHeight       = height + 35;
         var windowHeight    = height + 69;
 
